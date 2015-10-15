@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DNS Tester</title>
+	<link rel="shortcut icon" href="./icon.ico" />
+	<link rel="stylesheet" href="./assets/css/photon.min.css" />
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./assets/css/sweetalert.css" />
+	<link rel="stylesheet" href="./assets/css/override.css" />
+</head>
+
+<body>
+	<div class="window">
+		<header class="toolbar toolbar-header">
+			<div class="toolbar-actions">
+				<div class="btn-group">
+					<button id="aboutWindowBtn" class="btn btn-default">
+						<span class="icon icon-info"></span>
+					</button>
+				</div>
+				<div class="btn-group pull-right">
+					<button id="minWindowBtn" class="btn btn-default">
+						<span class="icon icon-minus"></span>
+					</button>
+					<button id="maxWindowBtn" class="btn btn-default">
+						<span class="icon icon-resize-full"></span>
+					</button>
+					<button id="closeWindowBtn" class="btn btn-default">
+						<span class="icon icon-cancel"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<div class="window-content">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>Hostname</th>
+						<th>Address</th>
+						<th>Family</th>
+					</tr>
+				</thead>
+				<tbody id="table-body">
+				</tbody>
+			</table>
+		</div>
+		<footer class="toolbar toolbar-footer">
+			<div class="toolbar-actions pull-right">
+				<div class="input-group">
+					<input id="hostname" class="form-control" type="text" placeholder="Hostname" />
+					<span class="input-group-btn">
+						<button id="queryBtn" class="btn btn-primary">
+							Query
+						</button>
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script>
+		window.$ = window.jQuery = require('./assets/js/jquery.min.js');
+		window.swal = window.sweetalert = require('./assets/js/sweetalert.min.js');
+	</script>
+	<script src="./assets/js/bootstrap.min.js"></script>
+	<script src="./assets/js/window-toolbar.js"></script>
+	<script src="./assets/js/dns-query.js"></script>
+</body>
+
+</html>
