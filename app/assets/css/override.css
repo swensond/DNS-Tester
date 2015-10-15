@@ -1,0 +1,25 @@
+.toolbar {
+	-webkit-app-region: drag;
+}
+
+button,
+input,
+td {
+	-webkit-app-region: no-drag;
+	-webkit-user-select: text;
+}
+
+.form-control:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.btn:focus {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.table > tbody > tr:hover {
+    color: rgba(41, 103, 182, 0.89);
+}

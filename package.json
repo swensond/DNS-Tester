@@ -1,0 +1,10 @@
+{
+	"name": "dns-tester",
+	"version": "0.0.1",
+	"main": "./app/index.js",
+	"scripts": {
+		"start": "electron ./app/",
+		"build:win": "electron-packager ./app/ \"DNS Tester\" --out=dist/win --platform=win32 --arch=x64 --version=0.33.8 --icon=app/icon.ico",
+		"pack:win": "npm run build:win && electron-builder \"dist/win/DNS Tester-win32\" --platform=win --out=\"dist/win\" --config=packager.json"
+	}
+}
